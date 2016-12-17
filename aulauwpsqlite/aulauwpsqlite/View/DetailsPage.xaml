@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="aulauwpsqlite.DetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:aulauwpsqlite"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Pessoa App - Alterar / Excluir" Margin="9,-7,0,0"/>
+        </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel>
+                <TextBox Name="NomeTextBox" Margin="10" Header="Nome"/>
+                <TextBox InputScope="Digits" Name="FoneTextBox" Margin="10" 
+                         MaxLength="10" Header="Fone" />
+                <Button x:Name="AlterarPessoaButton" Content="Alterar" 
+                        Margin="10" HorizontalAlignment="Stretch" 
+                        Click="AlterarPessoaButton_Click"/>
+                <Button x:Name="ExcluirPessoaButton" Content="Excluir" 
+                        Margin="10" HorizontalAlignment="Stretch" 
+                        Click="ExcluirPessoaButton_Click"/>
+                <Button x:Name="CancelarButton" Content="Cancelar" 
+                        Margin="10" HorizontalAlignment="Stretch" 
+                        Click="CancelarButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
